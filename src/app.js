@@ -3,7 +3,8 @@ const express = require('express')
 const hbs = require('hbs');
 const geoCode = require('./geoCode');
 const foreCast = require('./foreCast');
-
+ 
+const port = process.env.PORT || 3000;
 const app = express(); // create new instance of the appication, Creates an Express application
 
 //define paths for express config
@@ -83,6 +84,6 @@ app.com/home
 app.com/about
 */
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server started') // setting up the server is async process, now the server will be up and running until terminated
 })
